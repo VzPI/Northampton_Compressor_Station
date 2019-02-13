@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Northampton Compressor Station Proposal</title>
+<meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600,700|Open+Sans:300,400,600" rel="stylesheet">
+    <!-- Include Leaflet -->
+    <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+    <link href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" rel="stylesheet">
+    <!-- Include CARTO.js -->
+    <script src="https://libs.cartocdn.com/carto.js/v4.1.10/carto.min.js"></script>
+    <link href="https://carto.com/developers/carto-js/examples/maps/public/style.css" rel="stylesheet">
+    <link href="./styles.css" rel="stylesheet">
+</head>
+<body>
+<div class="map-wrapper">
+  <div id="map"></div>
+    <aside class="toolbox">
+      <div class="box">
+        <header>
+          <h1>Dominion | ACP - Northampton Compressor Station Project Site</h1>
+        </header>
+        <section>
+          <p class="description open-sans">Project Components & Boundaries:</p>
+          <div class="separator"></div>
+          <div id="controls">
+            <ul>
+              <li onclick="setemisssionpts()">
+                <input type="radio" name="source" id="emission_pts">
+                <label for="emission_pts">Emission Source Points</label>
+              </li>
+              <li onclick="setbuffer()">
+                <input type="radio" name="source" id="buffer">
+                <label for="buffer">2 Mile Proximity</label>
+              </li>
+              <li onclick="setparcel()">
+                <input type="radio" name="source" id="project_parcel">
+                <label for="project_parcel">Project Parcel (503 acres)</label>
+              </li>
+              <li onclick="setextent()">
+                <input type="radio" name="source" id="project_extent">
+                <label for="project_extent">Project Extent at Fence Line</label>
+              </li>
+            </ul>
+          </div>
+        </section>
+        <footer class="js-footer"></footer>
+      </div>
+    </aside>
+  </div>
+</div>
+
+ <!-- Include local.js -->
+ <script src="./script.js"></script>
+
+</body>
+</html>
